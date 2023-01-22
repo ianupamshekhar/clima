@@ -1,7 +1,7 @@
 # ⛅ Clima - A Weather app
 
 ## ✨ Overview
-A simple Weather App built with [react](https://reactjs.org/) and [OpenWeather API](https://openweathermap.org/api)
+A simple Weather App built with [JavaScript](https://www.javascript.com/) and [OpenWeather API](https://openweathermap.org/api)
 
 ## ⚙ Functionalities
 - Search the weather for a city, country
