@@ -1,0 +1,237 @@
+:root {
+    --bg: #ffffff;
+    --btn-bg: #ffd803;
+    --btn-clr: #272343;
+    --heading: #272343;
+    --paragraph: #2d334a;
+    --border: 3px solid #888787;
+    --border-radius: 0.5rem;
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: #202124;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+button,
+input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+.container {
+    width: 90%;
+    max-width: 20rem;
+}
+.loading {
+    color: #e8eaed;
+    font-size: 1.3rem;
+    align-self: center;
+}
+.hide-loading {
+    display: none;
+}
+.card {
+    width: 100%;
+    min-height: 23rem;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-header,
+.card-footer,
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.card-header {
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+.card-footer {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
+    width: 100%;
+}
+.card-footer::-webkit-scrollbar {
+    display: none;
+}
+.card-wrapper {
+    position: relative;
+    right: 1.2rem;
+}
+
+.card-wrapper > img {
+    position: relative;
+    bottom: 1.2rem;
+}
+.card-weather-location {
+    font-weight: 400;
+    color: #e8eaed;
+    font-size: 1.3rem;
+}
+.card-weather-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+}
+.card-weather-info > span {
+    color: #9aa0a6;
+    font-size: 0.813rem;
+}
+.card-weather-description {
+    color: #9aa0a6;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-top: 0.3rem;
+}
+.card-weather-units {
+    margin-inline: 0.7rem;
+}
+.card-weather-unit {
+    cursor: pointer;
+    position: relative;
+    font-size: 1.2rem;
+    color: #9aa0a6;
+}
+.card-weather-unit.is-active {
+    color: #e8eaed;
+}
+.card-weather-unit:nth-of-type(1) {
+    margin-right: 0.5rem;
+}
+.card-weather-unit:nth-of-type(1)::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 1.65rem;
+    height: 1.2rem;
+    width: 1px;
+    background-color: #868b90;
+}
+.card-weather-day {
+    text-align: center;
+    background-color: #202124;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+}
+.card-weather-day.is-active {
+    background-color: #303134;
+}
+.card-weather-degrees {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+}
+.card-weather-degrees {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.card-weather-degree {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #e8eaed;
+}
+.card-weather-day-name {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #e8eaed;
+}
+
+.card-weather-daily-temp {
+    color: #e8eaed;
+}
+.form {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-wrapper {
+    border-radius: var(--border-radius);
+    width: 60%;
+    height: inherit;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: #303134;
+}
+.input {
+    background-color: initial;
+    width: 100%;
+    padding-right: 1rem;
+    color: #e8eaed;
+}
+.input-search-icon {
+    width: 1rem;
+    height: 1rem;
+}
+.input,
+.btn {
+    font-family: 0.813rem;
+}
+.btn {
+    border-radius: var(--border-radius);
+    background-color: #2d334a;
+    height: inherit;
+    width: 35%;
+    color: #e8eaed;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 300ms ease;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.is-hidden {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    body {
+        min-height: 100vh;
+        align-items: center;
+        padding-top: 0;
+    }
+    .container {
+        max-width: 40rem;
+        width: 60%;
+    }
+    .card {
+        min-height: 21rem;
+        padding-top: 1rem;
+    }
+    .card-header {
+        flex-direction: row;
+    }
+    .card-weather-location {
+        font-size: 2rem;
+    }
+    .card-weather-description {
+        font-size: 1.2rem;
+    }
+    .input-wrapper {
+        width: 70%;
+    }
+    .btn {
+        width: 25%;
+    }
+    
+}
