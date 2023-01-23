@@ -9,8 +9,12 @@ A simple Weather App built with [JavaScript](https://www.javascript.com/) and [O
 - Shows colored weather icons
 
 ### 🚀 Getting Started
+
+#### Installation
 ```cmd
-git clone https://github.com/ianupamshekhar/clima. && cd clima. && yarn install 
+git clone https://github.com/ianupamshekhar/clima
+cd clima
+yarn install 
 ```
 
 #### Run 
